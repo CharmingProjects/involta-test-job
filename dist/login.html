@@ -9,19 +9,10 @@
   <link rel="stylesheet" href="/dist/css/bundle.css"/>
   <script src="/dist/js/main.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.0.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap-grid.min.css"/>
+  <script src="/dist/js/svg-caching.js"></script>
   <base href="http://involta-test.ru"><link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
-
-<svg style="position: absolute; width: 0; height: 0; overflow: hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<defs>
-<symbol id="icon-arrow-right2" viewBox="0 0 24 24">
-<title>arrow-right2</title>
-<path d="M14.561 20.561l7.5-7.5c0.586-0.586 0.586-1.536 0-2.121l-7.5-7.5c-0.586-0.586-1.536-0.586-2.121 0s-0.586 1.536 0 2.121l4.939 4.939h-14.379c-0.828 0-1.5 0.672-1.5 1.5s0.672 1.5 1.5 1.5h14.379l-4.939 4.939c-0.293 0.293-0.439 0.677-0.439 1.061s0.146 0.768 0.439 1.061c0.586 0.586 1.536 0.586 2.121 0z"></path>
-</symbol>
-</defs>
-</svg>
   <div class="main-wrapper">
     <div class="login-form-wrapper">
       <div class="logo"><img src="/dist/img/v-logo.svg" width="90"></div>
@@ -35,7 +26,9 @@
           <input class="login-form__input-email" id="password" type="password" required>
         </div>
         <button class="submit-btn" id="submit" type="submit">
-          <svg class="icon icon-arrow-right2"><use xlink:href="#icon-arrow-right2"></use></svg>
+          <svg viewBox="0 0 20 20" width="20" height="20">
+            <use xlink:href="#arrow-right"></use>
+          </svg>
         </button>
       </form>
       <div class="bottom-links">

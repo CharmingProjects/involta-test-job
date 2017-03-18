@@ -2,11 +2,9 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="0" height="0" style='display: none;' xmlns="http://www.w3.org/2000/svg">
 
-<!--****************-->
-<!--   EXTRA ICOS   -->
-<!--****************-->
+	<symbol id="arrow-right" viewBox="0 0 24 24">
+	<path fill="#000000" d="M14.561 20.561l7.5-7.5c0.586-0.586 0.586-1.536 0-2.121l-7.5-7.5c-0.586-0.586-1.536-0.586-2.121 0s-0.586 1.536 0 2.121l4.939 4.939h-14.379c-0.828 0-1.5 0.672-1.5 1.5s0.672 1.5 1.5 1.5h14.379l-4.939 4.939c-0.293 0.293-0.439 0.677-0.439 1.061s0.146 0.768 0.439 1.061c0.586 0.586 1.536 0.586 2.121 0z"></path>
+	</symbol>
 
-<symbol viewBox="0 0 306 306" id="arrow-up-ico">
-	<polygon class="arrow-up-ico" fill="currentColor" points="35.7,247.35 153,130.05 270.3,247.35 306,211.65 153,58.65 0,211.65"/>
-</symbol>
+
 </svg>
