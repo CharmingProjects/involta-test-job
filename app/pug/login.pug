@@ -1,0 +1,28 @@
+include mixins.pug
+doctype html
+<html lang="ru">
+
+include head.pug
+
+body
+	.main-wrapper
+		.login-form-wrapper
+			.logo
+				img(src="/dist/img/v-logo.svg", width=90)
+			form.login-form(action="")
+				.login-form__item
+					label.login-form__label-email(for="email") Эл. почта
+					input#email.login-form__input-email(type="text", required)
+				.login-form__item
+					label.login-form__label-pswd(for="password") Пароль
+					input#password.login-form__input-email(type="password", required)
+				button#submit.submit-btn(type="submit")
+					//-img(src="/dist/img/arrow.svg", width=20)
+					svg(viewBox="0 0 2048 2048" width="20" height="20")
+						use(xlink:href="#arrow")
+			.bottom-links
+				.bottom-links__right
+					a(href="#") Создать аккаунт?
+				.bottom-links__left
+					a(href="#") Забыли пароль?
+</html>
