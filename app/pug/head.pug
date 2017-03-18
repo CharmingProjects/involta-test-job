@@ -1,25 +1,4 @@
-- var headTags = {charset: "utf-8", title: "title",viewport: true, description: "description", keywords: "keyowords", author: "Oleg Palshin", mainCSSname: "bundle",mainJSname: "main",jQueryCDN: true, jQueryCDNv: "3.2.0", Bootstrap4CDN: true, addCSSnames: ["test1", "test2"],addJSnames: ["test1", "test2"] };
-
-mixin headTags(tag)
-	meta(charset=tag.charset)
-	title= tag.title
-	if tag.viewport
-	meta(name="viewport" content="width=device-width, initial-scale=1")
-	meta(description=tag.description)
-	meta(keywords=tag.keywords)
-	meta(author=tag.author)
-	link(rel="stylesheet" href=`/css/${tag.mainCSSname}.css`)
-	script(src=`/js/${tag.mainJSname}.js`)
-	if tag.jQueryCDN
-	script(src=`https://code.jquery.com/jquery-${tag.jQueryCDNv}.js`)
-	if tag.BootstrapGridCDN
-	link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap-grid.min.css")
-	if tag.addCSSnames
-	each css in tag.addCSSnames
-		link(rel="stylesheet" href=`/css/${css}.css`)
-	if tag.addJSnames
-	each js in tag.addJSnames
-		script(src=`/js/${js}.js`)
+- var headTags = {charset: "utf-8", title: "title", viewport: true, description: "description", keywords: "keywords", author: "Oleg Palshin", mainCSSname: "bundle",mainJSname: "main",jQueryCDN: true, jQueryCDNv: "3.2.0", Bootstrap4CDN: true, addCSSnames: false,addJSnames: false };
 
 head
 	+headTags(headTags)
