@@ -4,20 +4,29 @@ doctype html
 include head.pug
 body
 	.main-wrapper
+		.theme-picker
+			.light
+			.dark
 		.login-form-wrapper
 			.logo
-				img(src="/dist/img/v-logo.svg", width=90)
+				//-	img(src="/dist/img/v-logo.svg", width=90)
+				svg(viewBox="0 0 87 105" width="90")
+					use(xlink:href="#v-logo") 
 			form.login-form(action="")
 				.login-form__item
-					label.login-form__label-email(for="email") Эл. почта
-					input#email.login-form__input-email(type="text", required)
+					svg.cross-ico(viewBox="0 0 24 24", width="17")
+						use(xlink:href="#cross") 
+					input#email.login-form__input-email(type="text" value="")
+					label.login-form__label-email(for="email" value="") Эл. почта
 				.login-form__item
+					svg.cross-ico(viewBox="0 0 24 24", width="17")
+						use(xlink:href="#cross")
+					input#password.login-form__input-email(type="password")
 					label.login-form__label-pswd(for="password") Пароль
-					input#password.login-form__input-email(type="password", required)
 				button#submit.submit-btn(type="submit")
 					//-img(src="/dist/img/arrow.svg", width=20)
-					svg(viewBox="0 0 20 20" width="20" height="20")
-						use(xlink:href="#arrow-right")
+					svg(viewBox="0 -2 20 20" width="20" height="20")
+						use(xlink:href="#arrow-right") 
 			.bottom-links
 				.bottom-links__right
 					a(href="#") Создать аккаунт?

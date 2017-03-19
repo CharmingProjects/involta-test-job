@@ -9,7 +9,6 @@ mixin headTags(tag)
 	meta(keywords=tag.keywords)
 	meta(author=tag.author)
 	link(rel="stylesheet" href=`/dist/css/${tag.mainCSSname}.css`)
-	script(src=`/dist/js/${tag.mainJSname}.js`)
 	if tag.jQueryCDN
 		script(src=`https://code.jquery.com/jquery-${tag.jQueryCDNv}.js`)
 	if tag.Bootstrap4CDN
@@ -17,6 +16,7 @@ mixin headTags(tag)
 	if tag.addCSSnames
 		each css in tag.addCSSnames
 			link(rel="stylesheet" href=`/dist/css/${css}.css`)
+	script(src=`/dist/js/${tag.mainJSname}.js`)
 	if tag.addJSnames
 		each js in tag.addJSnames
 			script(src=`/dist/js/${js}.js`)

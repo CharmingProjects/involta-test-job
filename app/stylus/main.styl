@@ -11,52 +11,17 @@ body
 	display flex
 	min-height 100vh
 	width 100%
-	.login-form-wrapper
-		margin auto
-		width 340px
-		height 387px
-		border-radius: 12px;
-		background-color: #ffffff;
-		box-shadow: 0 2px 30px 0 rgba(38, 38, 38, 0.5);
-		.logo
-			text-align center
-			margin-top 45px
-.login-form
-	position relative
-	&__item
-		width 260px
-		margin auto
-		position relative
-		margin-bottom 28px
-		margin-top 24px
-	input
-		width 100%
-		height 35px
-		border 0
-		border-bottom 1px solid #d3d7db
-		display block
-		margin auto
-	label
-		display block
-		position absolute
-		font-size: 14px;
-		text-align: left;
-		color: #8b9399;
-		bottom 8px
-	button
-		width: 56px;
-		height: 56px;
-		position absolute
-		right -28px
-		bottom 6px
-		border-radius 50%
-		background-color: #efefef;
-		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
-		&:hover
-			background-color #00E676
-		img
-			display block
-			margin auto
+.login-form-wrapper
+	margin auto
+	max-width 340px
+	width 85%
+	height 387px
+	border-radius: 12px;
+	background-color: white;
+	box-shadow: 0 2px 30px 0 rgba(38, 38, 38, 0.5);
+	.logo
+		text-align center
+		margin-top 45px
 .bottom-links
 	display -webkit-flex
 	display -moz-flex
@@ -66,18 +31,105 @@ body
 	justify-content: space-between;
 	font-size: 12px;
 	max-width: 260px;
+	width 80%
 	margin: auto;
+	&__left
+		text-align right
 	a
 		color #9b9b9b
 		&:hover
-			color #00a9c0
-.icon
-	display: inline-block;
-	color: #444444;
-	width: 1em;
-	height: 1em;
-	fill: #000000;
-
-
-		
-		
+			color $link-text
+.login-form
+	position relative
+	&__item
+		max-width 260px
+		width 80%
+		margin auto
+		position relative
+		margin-bottom 28px
+		margin-top 24px
+		.cross-ico
+			color $cross-ico
+			position absolute
+			right 6px
+			bottom 9px
+			cursor pointer
+			display none
+			&[data-empty="false"]
+				display block
+			&:hover
+				color $cross-ico-h
+	input
+		width 100%
+		height 35px
+		border 0
+		border-bottom 1px solid #d3d7db
+		display block
+		margin auto
+		outline none
+		&:focus + label,
+		&[data-empty="false"] + label
+			color $link-text
+			font-size 12px
+			transform translate3d(0, -22px, 0)
+		&:focus
+			border-bottom 2px solid $link-text
+	label
+		display block
+		position absolute
+		font-size: 14px;
+		text-align: left;
+		color: $label-text;
+		bottom 8px
+		transition: all 0.2s ease-in-out;
+	button
+		width: 56px;
+		height: 56px;
+		position absolute
+		right -28px
+		bottom 6px
+		color $btn-text
+		border-radius 50%
+		background-color: $btn-bg;
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+		transition: all 0.1s ease-in-out;
+		&:hover
+			background-color $btn-bg-h
+			color $btn-text-h
+			// transform scale(1.1)
+			// box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.20), 0 4px 12px 0 rgba(0, 0, 0, 0.10);
+		img
+			display block
+			margin auto
+	
+.theme-light
+	background white
+.theme-dark
+	background $dt-form-bg
+	input
+		background $dt-form-bg
+		color white
+	.bottom-links
+		a
+			color $dt-link-text
+			&:hover
+				color $link-text
+.theme-picker	
+	width 100%
+	position absolute
+	left 48%
+	top 100px
+	.light,
+	.dark
+		width 20px
+		height 20px
+		background black
+		border-radius 50%
+		border 2px solid $link-text
+		display inline-block
+		box-shadow 0 0 5px $link-text
+		cursor pointer
+	.light
+		background white
+	.dark
+		background $dt-form-bg

@@ -7,27 +7,40 @@
   <meta keywords="keywords"/>
   <meta author="Oleg Palshin"/>
   <link rel="stylesheet" href="/dist/css/bundle.css"/>
-  <script src="/dist/js/main.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.0.js"></script>
-  <script src="/dist/js/svg-caching.js"></script>
-  <base href="http://involta-test.ru"><link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <script src="/dist/js/main.js"></script>
+  <script src="/dist/js/svg-caching.js"></script><link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
   <div class="main-wrapper">
+    <div class="theme-picker">
+      <div class="light"></div>
+      <div class="dark"></div>
+    </div>
     <div class="login-form-wrapper">
-      <div class="logo"><img src="/dist/img/v-logo.svg" width="90"></div>
+      <div class="logo">
+        <svg viewBox="0 0 87 105" width="90">
+          <use xlink:href="#v-logo"> </use>
+        </svg>
+      </div>
       <form class="login-form" action="">
         <div class="login-form__item">
-          <label class="login-form__label-email" for="email">Эл. почта</label>
-          <input class="login-form__input-email" id="email" type="text" required>
+          <svg class="cross-ico" viewBox="0 0 24 24" width="17">
+            <use xlink:href="#cross"> </use>
+          </svg>
+          <input class="login-form__input-email" id="email" type="text" value="">
+          <label class="login-form__label-email" for="email" value="">Эл. почта</label>
         </div>
         <div class="login-form__item">
+          <svg class="cross-ico" viewBox="0 0 24 24" width="17">
+            <use xlink:href="#cross"></use>
+          </svg>
+          <input class="login-form__input-email" id="password" type="password">
           <label class="login-form__label-pswd" for="password">Пароль</label>
-          <input class="login-form__input-email" id="password" type="password" required>
         </div>
         <button class="submit-btn" id="submit" type="submit">
-          <svg viewBox="0 0 20 20" width="20" height="20">
-            <use xlink:href="#arrow-right"></use>
+          <svg viewBox="0 -2 20 20" width="20" height="20">
+            <use xlink:href="#arrow-right"> </use>
           </svg>
         </button>
       </form>
