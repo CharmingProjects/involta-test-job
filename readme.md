@@ -1,3 +1,15 @@
-# WebStart
-### It is just ready templates of files for web development
-### Just clone this rep to your project and start developing much more faster!
+# Involta Test job
+Все файлы, которые относятся к старницам находятся в соответсвующих папках.
+При верстке использую метод разделения рабочих файлов (файлов препроцессоров), которые хранятся в папке - app, и готовых файлов (скомпилированных) в папке - dist, т.е. разработчикам перейдут те файлы, что находятся в dist.
+
+В качестве препроцессоров использую pug для html и stylus для css.
+Стараюсь придерживаться методологии именования классов - BEM. 
+На саму верстку ушло около трети времени (ниже в скобках), остальное это js, отладка багов и тестирование.
+Для каждой станицы также сделал мобильную версию. В макетах не было, но подумал, будет не лишним.
+Для станицы формы входа сделал графические темы.
+
+- Форма входа (~5 часов) - https://charmingprojects.github.io/involta-test/login/dist/login.html
+- Веб-сервис (~17 часов) - https://charmingprojects.github.io/involta-test/web-service/dist/web-service.html
+- Страница профиля (~14 часов) - https://charmingprojects.github.io/involta-test/profile/dist/profile.html#
+
+С опытом будут накапливаться css модули, миксины для препроцессоров и прочие шаблоны, которые позволят увеличить скорость верстки.
