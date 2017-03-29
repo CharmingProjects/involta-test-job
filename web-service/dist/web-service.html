@@ -1,0 +1,200 @@
+<!DOCTYPE html><html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <title>title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="description"/>
+  <meta name="keywords" content="keywords"/>
+  <meta name="author" content="Oleg Palshin"/>
+  <link rel="stylesheet" href="css/bundle.css"/>
+  <script src="https://code.jquery.com/jquery-3.2.0.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/svg-caching.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+</head>
+<body>
+  <div class="main-wrapper">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-close-ico" id="sidebarClose">
+        <svg class="cross-ico" viewBox="0 0 24 24" width="30">
+          <use xlink:href="#cross-ico"> </use>
+        </svg>
+      </div>
+      <div class="logo">
+        <svg viewBox="0 0 87 105" width="88">
+          <use xlink:href="#v-logo"></use>
+        </svg>
+      </div>
+      <div class="search-wrapper">
+        <form class="search-form">
+          <button class="search-submit" type="submit">
+            <svg class="search-ico" viewBox="0 0 24 24" width="26">
+              <use xlink:href="#search-ico"></use>
+            </svg>
+          </button>
+          <input class="search-field" type="search" placeholder="Найти пользователя...">
+        </form>
+      </div>
+      <div class="users-wrapper">
+        <ul class="users-list">
+          <li class="user">
+            <div class="user__avatar-wrapper"><img class="user__avatar-img" src="img/users/user1.png" width="42" height="44"/>
+            </div>
+            <div class="user__info">
+              <div class="user__name">Kiril</div>
+              <div class="user__email">test@test.ru</div>
+            </div>
+            <div class="user__net-status online"></div>
+          </li>
+          <li class="user">
+            <div class="user__avatar-wrapper"><img class="user__avatar-img" src="img/users/user.png" width="42" height="44"/>
+            </div>
+            <div class="user__info">
+              <div class="user__name">Frenzy</div>
+              <div class="user__email">test@test.ru</div>
+            </div>
+            <div class="user__net-status online"></div>
+          </li>
+          <li class="user">
+            <div class="user__avatar-wrapper"><img class="user__avatar-img" src="img/users/user2.png" width="42" height="44"/>
+            </div>
+            <div class="user__info">
+              <div class="user__name">Sergey</div>
+              <div class="user__email">test@test.ru</div>
+            </div>
+            <div class="user__net-status offline"></div>
+          </li>
+          <li class="user">
+            <div class="user__avatar-wrapper"><img class="user__avatar-img" src="img/users/user3.png" width="42" height="44"/>
+              <div class="user__avatar-checked">
+                <svg viewBox="0 0 26 26" width="26">
+                  <use xlink:href="#checked-ico"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="user__info">
+              <div class="user__name">Sergey</div>
+              <div class="user__email">test@test.ru</div>
+            </div>
+            <div class="user__net-status offline"></div>
+          </li>
+          <li class="user">
+            <div class="user__avatar-wrapper"><img class="user__avatar-img" src="img/users/user4.png" width="42" height="44"/>
+              <div class="user__avatar-checked">
+                <svg viewBox="0 0 26 26" width="26">
+                  <use xlink:href="#checked-ico"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="user__info">
+              <div class="user__name">Denis</div>
+              <div class="user__email">test@test.ru</div>
+            </div>
+            <div class="user__net-status offline"></div>
+          </li>
+          <li class="user">
+            <div class="user__avatar-wrapper"><img class="user__avatar-img" src="img/users/user.png" width="42" height="44"/>
+            </div>
+            <div class="user__info">
+              <div class="user__name">Sasha</div>
+              <div class="user__email">test@test.ru</div>
+            </div>
+            <div class="user__net-status offline"></div>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <section class="section" id="section">
+      <div class="menu">
+        <div class="nav-icon" id="nav-icon"><span></span><span></span><span></span><span></span></div>
+        <div class="sidebar-open-ico" id="sidebarOpen">
+          <svg viewBox="0 0 24 24" width="30">
+            <use xlink:href="#group-ico"></use>
+          </svg>
+        </div>
+        <nav class="nav-links" id="nav-links"><a class="nav-link active" href="#"><span>Паблик</span></a><a class="nav-link" href="#"><span>Университет</span></a><a class="nav-link" href="#"><span>Аналоги лекаств</span></a></nav>
+        <div class="add-ticket__wrapper">
+          <div class="add-ticket ripple">
+            <svg class="add_ico" viewBox="0 0 24 24" width="17">
+              <use xlink:href="#add-file-ico"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="main-content" id="mainContent">
+        <div class="ticket-wrapper" id="ticket-1">
+          <div class="ticket-head">
+            <h2 class="header">Мобильное приложение</h2><a class="change" href="#">Изменить</a>
+          </div>
+          <div class="ticket-form-wrapper">
+            <form class="ticket-form" action="" method="POST">
+              <div class="ticket-form__item-wrapper form-field__name">
+                <svg class="cross-ico" viewBox="0 0 24 24" width="17">
+                  <use xlink:href="#cross-ico"> </use>
+                </svg>
+                <input class="ticket-form__input-name" id="name-1" type="text">
+                <label class="ticket-form__label-name" for="name-1">Название тикета</label>
+              </div>
+              <div class="ticket-form__item-wrapper">
+                <label class="ticket-form__label-msg" for="msg">Сообщение</label>
+                <textarea class="ticket-form__input-msg" id="msg" placeholder="Сообщение (максимум 250 символов)"></textarea>
+                <div class="smiles-box">
+                  <div class="smile-1"></div>
+                </div>
+              </div>
+              <div class="ticket-form__item-wrapper">
+                <label class="ticket-form__label-files" for="files">Вложения</label>
+                <label class="ticket-form__upload-file">
+                  <input class="ticket-form__input-files" id="addFile" type="file">
+                  <div class="ticket-form__add-file-wrapper">
+                    <div class="ticket-form__add-file ripple">
+                      <svg class="add_ico" viewBox="0 0 24 24" width="17">
+                        <use xlink:href="#add-file-ico"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </label>
+                <div class="ticket-form__files-list">
+                  <div class="file-item"><img class="ticket-form__file-img" id="files" src="img/screen.png"/>
+                    <div class="file-item__delete-btn">
+                      <svg class="cross-ico" viewBox="0 0 24 24" width="12">
+                        <use xlink:href="#cross-ico"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="file-item"><img class="ticket-form__file-img" id="files" src="img/screen.png"/>
+                    <div class="file-item__delete-btn">
+                      <svg class="cross-ico" viewBox="0 0 24 24" width="12">
+                        <use xlink:href="#cross-ico"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="file-item"><img class="ticket-form__file-img" id="files" src="img/screen.png"/>
+                    <div class="file-item__delete-btn">
+                      <svg class="cross-ico" viewBox="0 0 24 24" width="12">
+                        <use xlink:href="#cross-ico"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="files-weight"><span>Общий размер: 32 мб</span></div>
+              </div>
+              <div class="ticket-form__item-wrapper options-list-wrapper">
+                <select class="ticket-form__options-list">
+                  <option>Опубликовать прямо сейчас</option>
+                  <option>Опубликовать через неделю</option>
+                  <option>Опубликовать через месяц</option>
+                  <option>Соранить в черновики</option>
+                </select>
+              </div>
+              <div class="ticket-form__item-wrapper submit-btn-wrapper">
+                <button class="submit-btn ripple" type="submit" onclick="return false;"><span class="submit-btn__text">Опубликовать</span></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body></html>

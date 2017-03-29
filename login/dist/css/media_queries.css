@@ -1,0 +1,8 @@
+@media screen and (max-width: 365px) {
+  .login-form-wrapper button {
+    width: 46px;
+    height: 46px;
+    right: -10px;
+    bottom: 10px;
+  }
+}

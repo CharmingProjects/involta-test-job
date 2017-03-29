@@ -1,0 +1,369 @@
+<!DOCTYPE html><html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <title>title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="description"/>
+  <meta name="keywords" content="keywords"/>
+  <meta name="author" content="Oleg Palshin"/>
+  <link rel="stylesheet" href="/dist/css/profile-bundle.css"/>
+  <script src="https://code.jquery.com/jquery-3.2.0.js"></script>
+  <link rel="stylesheet" href="/dist/css/bootstrap.css"/>
+  <script src="/dist/js/profile-main.js"></script>
+  <script src="/dist/js/svg-caching.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="header">
+      <div class="header__top-line">
+        <div class="mobile-nav-ico" id="mobileNavBtn">
+          <div class="bars-ico">
+            <svg width="24" height="24">
+              <use xlink:href="#bars-ico"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="user-profile">
+          <div class="user-emails">
+            <div class="user-emails__wrapper">
+              <div class="user-emails__amount"><span>4</span></div>
+              <div class="mail-ico">
+                <svg width="20" height="20">
+                  <use xlink:href="#mail-ico"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="user-notifications">
+            <div class="user-notifications__wrapper">
+              <div class="user-notifications__amount"><span>4</span></div>
+              <div class="notification-ico">
+                <svg width="24" height="24">
+                  <use xlink:href="#notification-ico"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="user-avatar"><a class="user-avatar__link" href="#"><img src="img/avatar-head.png"></a></div>
+        </div>
+      </div>
+      <div class="header__nav-line">
+        <nav class="nav" id="mainNavigation">
+          <ul class="nav__links-list" id="mainNavigationList">
+            <li class="nav__list-item"><a class="nav__link" href="#"><span>Главная</span></a></li>
+            <li class="nav__list-item"><a class="nav__link" href="#"> <span>Новости</span></a></li>
+            <li class="nav__list-item"><a class="nav__link" href="#"><span>Подразделения</span></a></li>
+            <li class="nav__list-item"><a class="nav__link" href="#"><span>Расписания</span></a></li>
+            <li class="nav__list-item"><a class="nav__link" href="#"><span>Люди</span></a></li>
+            <li class="nav__list-item current"><a class="nav__link" href="#"><span>Мой профиль</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="container">
+      <div class="container__head row">
+        <h1>Мой профиль</h1>
+      </div>
+      <div class="main-content">
+        <div class="tabs-nav row">
+          <div class="tab-nav active col-md-4"><a class="tab-nav__link" href="#"><span>Профиль</span></a></div>
+          <div class="tab-nav col-md-4"><a class="tab-nav__link" href="#"><span>Курсы						</span></a></div>
+          <div class="tab-nav col-md-4"><a class="tab-nav__link" href="#"><span>Портфолио</span></a></div>
+        </div>
+        <div class="row user-profile">
+          <div class="col-md-4 left-column">
+            <div class="left-column__wrapper">
+              <div class="avatar-big">
+                <div class="avatar-big__change">
+                  <div class="camera-ico">
+                    <svg width="21" height="21">
+                      <use xlink:href="#camera-ico"></use>
+                    </svg>
+                  </div><span>Обновить фотографию</span>
+                </div>
+                <div class="avatar-big__img-wrapper"><img class="avatar-big__img" src="img/photo.png"></div>
+              </div>
+              <div class="notifications">
+                <div class="notifications__item">
+                  <div class="hide-notification cross-ico">
+                    <svg width="10" height="10">
+                      <use xlink:href="#cross-ico"></use>
+                    </svg>
+                  </div>
+                  <p class="notifications__head">Занятие перенесено</p>
+                  <p class="notifications__text">Дисциплина Философия для группы СО-23 перенесена на 13:00, 512 ауд.</p>
+                </div>
+                <div class="notifications__item">
+                  <div class="hide-notification cross-ico">
+                    <svg width="10" height="10">
+                      <use xlink:href="#cross-ico"></use>
+                    </svg>
+                  </div>
+                  <p class="notifications__head">Занятие перенесено</p>
+                  <p class="notifications__text">Дисциплина Философия для группы СО-23 перенесена на 13:00, 512 ауд.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 col-sm-9">
+            <div class="profile-info">
+              <div class="about-user">
+                <div class="about-user__head">
+                  <div class="record-voice-ico head-ico-item">
+                    <svg width="25" height="25">
+                      <use xlink:href="#record-voice-ico"></use>
+                    </svg>
+                  </div>
+                  <div class="about-user__head-text">
+                    <h2>О себе</h2>
+                  </div>
+                  <div class="more-vert-ico ripple">
+                    <div class="more-vert-ico__wrapper">
+                      <svg width="25" height="25">
+                        <use xlink:href="#more-vert-ico"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="profile-settings-menu">
+                    <div class="profile-settings-menu__wrapper">
+                      <ul class="profile-settings-menu__list">
+                        <li class="profile-settings-menu__list-item"><a class="profile-settings-menu__link" href="#">Изменить</a></li>
+                        <li class="profile-settings-menu__list-item"><a class="profile-settings-menu__link" href="#">Добавить</a></li>
+                        <li class="profile-settings-menu__list-item"> <a class="profile-settings-menu__link" href="#">Удалить</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="about-user__content">
+                  <p>«ВКонта́кте» — социальная сеть принадлежащая Mail.Ru Group.</p>
+                  <p>Располагается по адресу vk.com. По данным SimilarWeb, «ВКонтакте» является первым по популярности сайтом в России и на Украине, 4-м — в мире.</p>
+                </div>
+              </div>
+              <div class="main-info">
+                <div class="main-info__head">
+                  <div class="person-ico head-ico-item">
+                    <svg width="25" height="25">
+                      <use xlink:href="#person-ico"></use>
+                    </svg>
+                  </div>
+                  <div class="main-info__head-text">
+                    <h2>Основная информация</h2>
+                  </div>
+                  <div class="more-vert-ico ripple">
+                    <div class="more-vert-ico__wrapper">
+                      <svg width="25" height="25">
+                        <use xlink:href="#more-vert-ico"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="profile-settings-menu">
+                    <div class="profile-settings-menu__wrapper">
+                      <ul class="profile-settings-menu__list">
+                        <li class="profile-settings-menu__list-item"><a class="profile-settings-menu__link" href="#">Изменить</a></li>
+                        <li class="profile-settings-menu__list-item"><a class="profile-settings-menu__link" href="#">Добавить</a></li>
+                        <li class="profile-settings-menu__list-item"> <a class="profile-settings-menu__link" href="#">Удалить</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-info__content">
+                  <div class="main-info__form-wrapper">
+                    <form class="main-info__form">
+                      <div class="main-info__form-row">
+                        <label class="main-info__form-label" for="">Роль</label>
+                        <input class="main-info__form-input" id="userRole" type="text" name="">
+                      </div>
+                      <div class="main-info__form-row">
+                        <label class="main-info__form-label" for="">Имя</label>
+                        <input class="main-info__form-input" id="userName" type="text" name="">
+                      </div>
+                      <div class="main-info__form-row">
+                        <label class="main-info__form-label" for="">Отчество</label>
+                        <input class="main-info__form-input" id="userPatronymic" type="text" name="">
+                      </div>
+                      <div class="main-info__form-row">
+                        <label class="main-info__form-label" for="">Фамилия</label>
+                        <input class="main-info__form-input" id="userLastName" type="text" name="">
+                      </div>
+                      <div class="main-info__form-row">
+                        <label class="main-info__form-label" for="">Дата рождения</label>
+                        <input class="main-info__form-input" id="userBirthDate" type="text" name="">
+                      </div>
+                      <div class="main-info__form-row main-info__form-btn-group">
+                        <button class="main-info__form-submit ripple" onclick="return false">Сохранить</button>
+                        <button class="main-info__form-decline ripple" onclick="return false">Отменить</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="student-profile">
+                <div class="student-profile__head">
+                  <div class="school-hat-ico head-ico-item">
+                    <svg width="25" height="25">
+                      <use xlink:href="#school-hat-ico"></use>
+                    </svg>
+                  </div>
+                  <div class="student-profile__head-text">
+                    <h2>Студенческий профиль</h2>
+                  </div>
+                  <div class="more-vert-ico ripple">
+                    <div class="more-vert-ico__wrapper">
+                      <svg width="25" height="25">
+                        <use xlink:href="#more-vert-ico"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="profile-settings-menu">
+                    <div class="profile-settings-menu__wrapper">
+                      <ul class="profile-settings-menu__list">
+                        <li class="profile-settings-menu__list-item"><a class="profile-settings-menu__link" href="#">Изменить</a></li>
+                        <li class="profile-settings-menu__list-item"><a class="profile-settings-menu__link" href="#">Добавить</a></li>
+                        <li class="profile-settings-menu__list-item"> <a class="profile-settings-menu__link" href="#">Удалить</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="student-profile__content">
+                  <div class="student-profile__form-wrapper">
+                    <form class="student-profile__form">
+                      <div class="student-profile__form-row">
+                        <label class="student-profile__form-label" for="">Университет</label>
+                        <div class="select-wrapper">
+                          <select class="student-profile__form-select" id="userUniversity" type="" name="">
+                            <option>ИвГУ (Ивановский филиал)</option>
+                            <option>ИвГУ (Шуйский филиал)</option>
+                            <option>ИГМА</option>
+                            <option>ИГЭУ</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="student-profile__form-row">
+                        <label class="student-profile__form-label" for="">Год поступления</label>
+                        <div class="select-wrapper">
+                          <select class="student-profile__form-select" id="userEnterYear" type="" name="">
+                            <option>2017</option>
+                            <option>2016</option>
+                            <option>2015</option>
+                            <option>2014</option>
+                            <option>2013</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="student-profile__form-row">
+                        <label class="student-profile__form-label" for="">Курс</label>
+                        <div class="select-wrapper">
+                          <select class="student-profile__form-select" id="userCourse" type="" name="">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="student-profile__form-row">
+                        <label class="student-profile__form-label" for="">Факультет</label>
+                        <div class="select-wrapper">
+                          <select class="student-profile__form-select" id="userFaculty" type="" name="">
+                            <option>Экономический</option>
+                            <option>Физический</option>
+                            <option>Филологический</option>
+                            <option>Юридический</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="student-profile__form-row">
+                        <label class="student-profile__form-label" for="">Группа</label>
+                        <div class="select-wrapper">
+                          <select class="student-profile__form-select" id="userGroup" type="" name="">
+                            <option>СО-24</option>
+                            <option>СО-25</option>
+                            <option>СО-26</option>
+                            <option>СО-27</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="student-profile__form-row">
+                        <label class="student-profile__form-label" for="">Зачетка</label>
+                        <input class="student-profile__form-input" id="userRecordBook" type="" name="">
+                      </div>
+                      <div class="student-profile__form-row">
+                        <label class="student-profile__form-label" for="">Студенческий</label>
+                        <input class="student-profile__form-input" id="userID" type="" name="">
+                      </div>
+                      <div class="student-profile__form-row">
+                        <label class="student-profile__form-label" for="">Форма обучения</label>
+                        <div class="select-wrapper">
+                          <select class="student-profile__form-select" id="userEduForm" type="" name="">
+                            <option>Очная</option>
+                            <option>Заочная</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="student-profile__form-row">
+                        <label class="student-profile__form-label" for="">Дополнительно</label>
+                        <input class="student-profile__form-input" id="userExtraInfo" type="" name="">
+                      </div>
+                      <div class="student-profile__form-row student-profile__form-btn-group">
+                        <button class="student-profile__form-submit ripple" onclick="return false">Сохранить</button>
+                        <button class="student-profile__form-decline ripple" onclick="return false">Отменить</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="user-contacts">
+                <div class="user-contacts__head">
+                  <div class="call-ico head-ico-item">
+                    <svg width="25" height="25">
+                      <use xlink:href="#call-ico"></use>
+                    </svg>
+                  </div>
+                  <div class="user-contacts__head-text">
+                    <h2>Контакты</h2>
+                  </div>
+                  <div class="more-vert-ico ripple">
+                    <div class="more-vert-ico__wrapper">
+                      <svg width="25" height="25">
+                        <use xlink:href="#more-vert-ico"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="profile-settings-menu">
+                    <div class="profile-settings-menu__wrapper">
+                      <ul class="profile-settings-menu__list">
+                        <li class="profile-settings-menu__list-item"><a class="profile-settings-menu__link" href="#">Изменить</a></li>
+                        <li class="profile-settings-menu__list-item"><a class="profile-settings-menu__link" href="#">Добавить</a></li>
+                        <li class="profile-settings-menu__list-item"> <a class="profile-settings-menu__link" href="#">Удалить</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="user-contacts__content">
+                  <div class="user-contacts__form-wrapper">
+                    <form class="user-contacts__form">
+                      <div class="user-contacts__form-row">
+                        <label class="user-contacts__form-label" for="">Телефон</label>
+                        <input class="user-contacts__form-input" id="userPhone" type="tel" name="">
+                      </div>
+                      <div class="user-contacts__form-row">
+                        <label class="user-contacts__form-label" for="">Эл. Почта</label>
+                        <input class="user-contacts__form-input" id="userEmail" type="email" name="">
+                      </div>
+                      <div class="user-contacts__form-row user-contacts__form-btn-group">
+                        <button class="user-contacts__form-submit ripple" onclick="return false">Сохранить</button>
+                        <button class="user-contacts__form-decline ripple" onclick="return false">Отменить</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body></html>						

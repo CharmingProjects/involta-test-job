@@ -1,0 +1,104 @@
+@media screen and (max-width: 992px)
+	.left-column
+		&__wrapper
+			margin 30px 10px
+		.avatar-big
+			margin 10px
+			&__img
+				width 100%
+	.profile-info
+		padding 40px 0 18px
+	.about-user
+		margin-bottom 40px
+	.about-user,
+	.main-info,
+	.student-profile,
+	.user-contacts
+		margin-bottom 58px
+		&__content	
+			padding-top 12px
+			padding-right 10px
+@media screen and (max-width: 770px)
+	.header
+		&__top-line
+			display -webkit-flex
+			display -moz-flex
+			display -ms-flex
+			display -o-flex
+			display flex
+			justify-content space-between
+			.bars-ico
+				display block
+		&__nav-line
+			display none
+			height auto
+	.mobile-nav-ico
+		margin 15px 10%
+		cursor pointer
+	.nav
+		&__links-list
+			width 100%
+			display -webkit-flex
+			display -moz-flex
+			display -ms-flex
+			display -o-flex
+			display flex
+			flex-direction column
+		&__list-item
+			height 30px
+		&__list-item:first-of-type
+			padding 0
+@media screen and (max-width: 666px)
+	.left-column,
+	.user-profile
+		display block
+	.left-column
+		&__wrapper
+			display: flex;
+			justify-content: space-around;
+	.notifications
+		margin 10px 10px
+	.avatar-big,
+	.notifications
+		width 45%
+	.profile-info
+		padding: 40px 20px 18px;
+@media screen and (max-width: 515px)
+	.about-user,
+	.main-info,
+	.student-profile,
+	.user-contacts
+		&__form-row
+			flex-direction column
+			align-items flex-start
+		&__form-btn-group
+			flex-direction row
+			justify-content center
+		&__form-decline
+			margin-right 0
+		&__content
+			padding-right 0
+		&__content
+			padding-right 0
+		&__form-input,
+		&__form-select,
+		.select-wrapper
+			width 100%	
+@media screen and (max-width: 370px)
+	.left-column
+		&__wrapper
+			display: flex;
+			flex-direction column
+	.left-column .avatar-big,
+	.notifications
+		width 90%
+		margin 10px auto 10px
+	.left-column .avatar-big
+		margin 20px auto 0px
+	.profile-info
+		padding: 30px 15px 15px;
+		40px 20px 18px
+		.select-wrapper
+			&:after
+				right: 5px;
+				top: 45px;

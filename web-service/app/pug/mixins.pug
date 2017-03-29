@@ -1,0 +1,47 @@
+//- Head tags generating
+
+mixin headTags(tag)
+	meta(charset=tag.charset)
+	title= tag.title
+	if tag.viewport
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+	meta(name="description" content=tag.description)
+	meta(name="keywords" content=tag.keywords)
+	meta(name="author" content=tag.author)
+	link(rel="stylesheet" href=`css/${tag.mainCSSname}.css`)
+	if tag.jQueryCDN
+		script(src=`https://code.jquery.com/jquery-${tag.jQueryCDNv}.js`)
+	if tag.Bootstrap4CDN
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap-grid.min.css")
+	if tag.Bootstrap3CDN
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
+	if tag.addCSSnames
+		each css in tag.addCSSnames
+			link(rel="stylesheet" href=`/dist/css/${css}.css`)
+	script(src=`js/${tag.mainJSname}.js`)
+	if tag.addJSnames
+		each js in tag.addJSnames
+			script(src=`js/${js}.js`)
+
+mixin newuser(url,checked,name,email,status)
+	li.user
+		.user__avatar-wrapper
+			img.user__avatar-img(src=`img/users/${url}` width=42, height=44)
+			if checked
+				.user__avatar-checked
+					svg(viewBox="0 0 26 26" width="26")
+						use(xlink:href="#checked-ico")
+		.user__info
+			.user__name= name
+			.user__email= email 
+		if status == "online"
+			.user__net-status.online
+		else
+			.user__net-status.offline
+
+mixin newFileItem(url)
+	.file-item
+		img#files.ticket-form__file-img(src=`img/${url}`)
+		.file-item__delete-btn
+			svg.cross-ico(viewBox="0 0 24 24", width="12")
+				use(xlink:href="#cross-ico")

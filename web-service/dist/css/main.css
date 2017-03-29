@@ -1,0 +1,501 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.main-wrapper {
+  background: url("../img/bg-compressed.jpg");
+  background-position: center center;
+  background-size: cover;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+.sidebar {
+  max-width: 340px;
+  min-width: 230px;
+  width: 35%;
+  position: relative;
+  background: #fff;
+  z-index: 10;
+  box-shadow: 0 2px 30px 0 rgba(145,145,145,0.5);
+}
+.sidebar .sidebar-close-ico {
+  display: none;
+  cursor: pointer;
+}
+.sidebar .logo {
+  text-align: center;
+  margin-top: 82px;
+  margin-bottom: 38px;
+}
+.sidebar .search-field {
+  display: block;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 0px 14px;
+  margin: -4px 0 0 -9px;
+}
+.sidebar .search-form {
+  display: flex;
+  margin: 0 20px 0 20px;
+  border-bottom: 1px solid $border-light;
+  padding-top: 8px;
+  position: relative;
+  justify-content: center;
+}
+.sidebar .search-submit {
+  background: none;
+  z-index: 1;
+}
+.sidebar .search-submit svg {
+  color: $border-gray;
+}
+.sidebar .user {
+  height: 77px;
+  padding: 0 20px 0 20px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $border-light;
+}
+.sidebar .user:first-of-type {
+  margin-top: 22px;
+}
+.sidebar .user__avatar-wrapper {
+  position: relative;
+  max-height: 42px;
+}
+.sidebar .user__avatar-checked {
+  position: absolute;
+  right: -13px;
+  bottom: -6px;
+}
+.sidebar .user__info {
+  padding: 0 20px 0 20px;
+  flex-grow: 1;
+  line-height: 14px;
+}
+.sidebar .user__name {
+  color: $info-name;
+  margin: 2px 0 -4px 0;
+}
+.sidebar .user__email {
+  color: $info-email;
+  font-size: 15px;
+  padding-top: 10px;
+}
+.sidebar .user__net-status {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.sidebar .user .offline {
+  background-color: $offline;
+}
+.sidebar .user .online {
+  background-color: $online;
+}
+.section {
+  width: calc(100% - 340px);
+}
+.menu {
+  width: 100%;
+  height: 60px;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0 1px 20px 0 rgba(0,0,0,0.2);
+  position: relative;
+}
+.menu .nav-icon {
+  display: none;
+}
+.menu .sidebar-open-ico {
+  color: $border-red;
+  display: none;
+  cursor: pointer;
+}
+.menu .nav-links {
+  height: inherit;
+  margin-left: 15px;
+  margin-right: 60px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+.menu .nav-links .nav-link {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  border-bottom: 4px solid $border-gray;
+  width: 257px;
+  height: inherit;
+  box-sizing: border-box;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+.menu .nav-links .nav-link span {
+  margin: auto;
+}
+.menu .nav-links .nav-link:hover {
+  border-bottom: 4px solid $border-red;
+  transition: all 0.2s ease-in-out;
+}
+.menu .nav-links .nav-link.active {
+  border-bottom: 4px solid $border-red;
+}
+.add-ticket,
+.add-ticket__wrapper {
+  position: absolute;
+  right: 15px;
+  top: 12px;
+  cursor: pointer;
+  background: $border-red;
+  width: 36px;
+  height: 36px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #fff;
+}
+.add-ticket svg,
+.add-ticket__wrapper svg {
+  margin: auto;
+}
+.add-ticket {
+  position: relative;
+  overflow: hidden;
+  right: 0;
+  top: 0;
+}
+.main-content {
+  width: 100%;
+  overflow: auto;
+  position: relative;
+  height: calc(100% - 60px);
+  white-space: nowrap;
+}
+.ticket-wrapper {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  max-width: 400px;
+  height: 784px;
+  box-shadow: 0 1px 30px 0 rgba(0,0,0,0.15);
+  border-top: 10px solid $border-red;
+  margin: 15px 0 15px 15px;
+  background-color: #fff;
+  box-sizing: border-box;
+  position: relative;
+}
+.ticket-wrapper:after {
+  content: "";
+  width: 1px;
+  height: 1px;
+  display: block;
+  right: -15px;
+  position: absolute;
+}
+.ticket-head {
+  margin: 27px 0 0 31px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ticket-head .header {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+.ticket-head a.change {
+  font-size: 13px;
+  display: block;
+  margin-right: 32px;
+  color: $link-gray;
+}
+.ticket-head a.change:hover {
+  color: $link-text;
+}
+.ticket-form-wrapper {
+  max-width: 340px;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 28px;
+  margin-top: 24px;
+}
+.ticket-form__item-wrapper {
+  position: relative;
+  margin: auto;
+  margin-top: 39px;
+}
+.ticket-form__item-wrapper:first-of-type {
+  margin-top: 48px;
+}
+.ticket-form__item-wrapper input,
+.ticket-form__item-wrapper textarea {
+  width: 100%;
+}
+.ticket-form__item-wrapper .cross-ico {
+  color: $cross-ico;
+  position: absolute;
+  right: 0px;
+  bottom: 9px;
+  cursor: pointer;
+  display: none;
+}
+.ticket-form__item-wrapper .cross-ico[data-empty="false"] {
+  display: block;
+}
+.ticket-form__item-wrapper .cross-ico:hover {
+  color: $cross-ico-h;
+}
+.ticket-form__item-wrapper input {
+  height: 35px;
+  border: 0;
+  display: block;
+  margin: auto;
+  outline: none;
+  border-bottom: 1px solid #d3d7db;
+  box-sizing: border-box;
+}
+.ticket-form__item-wrapper input:focus + label,
+.ticket-form__item-wrapper input[data-empty="false"] + label {
+  color: $link-text;
+  font-size: 12px;
+  transform: translate3d(0, -22px, 0);
+}
+.ticket-form__item-wrapper input:focus {
+  border-bottom: 2px solid $link-text;
+}
+.ticket-form__item-wrapper textarea {
+  height: 140px;
+  height: 140px;
+  padding: 10px 12px;
+  font-size: 14px;
+  box-sizing: border-box;
+  resize: none;
+  color: $label-gray;
+  border: 1px solid $border-light-gray;
+}
+.ticket-form__item-wrapper textarea:focus {
+  border: 2px solid $link-text;
+}
+.ticket-form__item-wrapper label {
+  display: block;
+  text-align: left;
+  color: $label-gray;
+}
+.ticket-form__item-wrapper select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+  outline: 0;
+  color: $select-black;
+  cursor: pointer;
+}
+.ticket-form__item-wrapper select::-ms-expand {
+  display: none;
+}
+.ticket-form__label-name {
+  position: absolute;
+  font-size: 14px;
+  bottom: 8px;
+  transition: all 0.2s ease-in-out;
+  cursor: text;
+}
+.ticket-form__label-msg {
+  font-size: 16px;
+  margin-left: 2px;
+  margin-bottom: 9px;
+  margin-top: -6px;
+}
+.ticket-form__label-files {
+  margin-top: 54px;
+}
+.ticket-form__label-msg,
+.ticket-form__label-files {
+  position: relative;
+}
+.ticket-form__upload-file {
+  overflow: hidden;
+  width: 36px;
+  position: absolute;
+  right: 0;
+  top: 29px;
+}
+.ticket-form__input-files {
+  opacity: 0;
+  position: absolute;
+  width: 36px;
+  cursor: pointer;
+  z-index: -1;
+}
+.ticket-form__add-file {
+  background: $btn-blue;
+  width: 36px;
+  height: 36px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #fff;
+}
+.ticket-form__add-file svg {
+  margin: auto;
+}
+.ticket-form__files-list {
+  margin-top: 10px;
+  width: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: flex-start;
+}
+.ticket-form__files-list .file-item {
+  margin-right: 7px;
+  position: relative;
+}
+.ticket-form__files-list .file-item__delete-btn {
+  background: #000;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}
+.ticket-form__files-list .file-item__delete-btn .cross-ico {
+  display: block;
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  right: 0;
+}
+.ticket-form__options-list {
+  width: 105%;
+  background: transparent;
+  border: none;
+  margin-top: -10px;
+  height: 37px;
+  position: relative;
+  z-index: 4;
+}
+.files-weight {
+  font-size: 14px;
+  margin-top: 14px;
+  color: $label-gray;
+}
+.smiles-box {
+  margin-top: -23px;
+}
+.smiles-box .smile-1 {
+  background-image: url("../img/smile.png");
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  position: absolute;
+  right: 9px;
+  bottom: 9px;
+}
+.options-list-wrapper {
+  margin-top: 27px;
+  border-bottom: 1px solid $border-light-gray;
+}
+.options-list-wrapper:after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-bottom: 5px solid #999;
+  border-right: 5px solid #999;
+  border-top: 5px solid transparent;
+  border-left: 5px solid transparent;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  right: -2px;
+  top: 6px;
+  z-index: 2;
+}
+.submit-btn-wrapper {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  height: 125px;
+  border-top: 1px solid $border-light-gray;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+.submit-btn-wrapper .submit-btn {
+  text-transform: uppercase;
+  background: $btn-green;
+  color: #fff;
+  font-size: 14px;
+  margin: auto;
+  height: 45px;
+  width: 300px;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+.submit-btn-wrapper .submit-btn__text {
+  display: block;
+}
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+.ripple .rippleElem {
+  position: absolute;
+  display: block;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  width: 0;
+  height: 0;
+  background: rgba(255,255,255,0.5);
+}
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+  background: transparent;
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
+::-webkit-scrollbar-thumb {
+  background: $scroolbar-gray;
+  border-radius: 8px;
+}
