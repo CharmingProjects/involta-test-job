@@ -248,7 +248,7 @@ body {
   display: -ms-flex;
   display: -o-flex;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .header__top-line .user-emails,
 .header__top-line .user-notifications {
