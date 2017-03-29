@@ -12,8 +12,8 @@
 Для каждой страницы также сделал мобильную версию. В макетах не было, но подумал, будет не лишним.
 Для страницы формы входа/регистрации сделал графические темы.
 
-- Форма входа (~5 часов) - https://charmingprojects.github.io/involta-test/login/dist/login.html
-- Веб-сервис (~17 часов) - https://charmingprojects.github.io/involta-test/web-service/dist/web-service.html
-- Страница профиля (~14 часов) - https://charmingprojects.github.io/involta-test/profile/dist/profile.html#
+- Форма входа (~5 часов) - https://charmingprojects.github.io/involta-test-job/login/dist/login.html
+- Веб-сервис (~17 часов) - https://charmingprojects.github.io/involta-test-job/web-service/dist/web-service.html
+- Страница профиля (~14 часов) - https://charmingprojects.github.io/involta-test-job/profile/dist/profile.html#
 
 С опытом будут накапливаться css модули, миксины для препроцессоров и прочие шаблоны, которые позволят увеличить скорость верстки.
