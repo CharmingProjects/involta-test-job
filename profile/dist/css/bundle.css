@@ -345,7 +345,7 @@ body {
   font-size: 14px;
   text-transform: uppercase;
 }
-.nav .current {
+.nav .current a{
   color: #fff;
 }
 .nav .magic-line {
