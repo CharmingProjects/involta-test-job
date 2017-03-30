@@ -208,7 +208,7 @@ html {
 }
 body {
   height: inherit;
-  font-family: Roboto, "Hevetica" !important;
+  font-family: 'Roboto', sans-serif !important;
 }
 .ripple {
   position: relative;
